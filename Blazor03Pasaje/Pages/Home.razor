@@ -1,0 +1,59 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Cuantos gastare en el pasaje ?</h1>
+
+<br />
+
+<h4>Diferentes tarifa de pasaje son:</h4>
+<h6>Pasaje a pie = $0</h6>
+<h6>Pasaje metro = $20</h6>
+<h6>Pasaje carro publico 1 = $30</h6>
+<h6>Pasaje carro publico 2 = $40</h6>
+<h6>Pasaje motor = $100</h6>
+<h6>Pasaje uber = $200</h6>
+
+<label>Su pasaje es para ir en:</label>
+<br />
+
+<input type="number" @bind="Pasaje" />
+
+
+@if (Pasaje == 0)
+{
+    <p>A pie</p>
+}
+
+@if (Pasaje == 20)
+{
+    <p>Metro</p>
+}
+
+@if (Pasaje == 30)
+{
+    <p>Carro bublico 1</p>
+}
+
+@if (Pasaje == 40)
+{
+    <p>Carro publico 2</p>
+}
+
+@if (Pasaje == 100)
+{
+    <p>Motor</p>
+}
+
+@if (Pasaje == 200)
+{
+    <p>Uber</p>
+}
+ 
+
+@code {
+    int Pasaje = 200;
+}
+
+
+
